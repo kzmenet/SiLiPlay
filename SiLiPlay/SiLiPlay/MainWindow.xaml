@@ -5,19 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SiLiPlay"
         mc:Ignorable="d"
-        Title="MainWindow" Height="164" Width="235.666" Closing="Window_Closing">
+        Title="MainWindow" Height="207.333" Width="316.333" Closing="Window_Closing">
     <Grid>
         <Button x:Name="playbutton" Content="Play" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="0,23,0,0" Click="playbutton_Click"/>
-        <Button x:Name="StopButton" Content="Stop" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="75,23,0,0" Click="StopButton_Click"/>
-        <Button x:Name="OpenButton" Content="Open" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="150,23,0,0" Click="OpenButton_Click"/>
-        <Slider x:Name="slider" HorizontalAlignment="Left" VerticalAlignment="Top" Width="225"/>
+        <Button x:Name="StopButton" Content="Stop" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="150,23,0,0" Click="StopButton_Click"/>
+        <Button x:Name="OpenButton" Content="Open" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="225,23,0,0" Click="OpenButton_Click"/>
+        <Slider x:Name="slider" HorizontalAlignment="Left" VerticalAlignment="Top" Width="300"/>
         <Label x:Name="label" Content="音量" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,43,0,0"/>
-        <Slider x:Name="slider1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="39,48,0,0" Width="186" Maximum="1" LargeChange="0" SmallChange="0.01" ValueChanged="slider1_ValueChanged" Value="1"/>
+        <Slider x:Name="Volumeslider" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="39,48,0,0" Width="186" Maximum="1" LargeChange="0" SmallChange="0.01" ValueChanged="slider1_ValueChanged" Value="0.5"/>
         <Label x:Name="label1" Content="Fade" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,69,0,0"/>
-        <Slider x:Name="slider2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="39,77,0,0" Width="186" SmallChange="0.01" Maximum="1"/>
-        <Button x:Name="button" Content="Run" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="0,100,0,0"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="100" VerticalAlignment="Top" Width="104" Margin="121,101,0,0"/>
-        <Label x:Name="label2" Content="減少量" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="75,97,0,0"/>
+        <Slider x:Name="Fadeslider" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="39,77,0,0" Width="186" SmallChange="0.01" Maximum="1"/>
+        <Button x:Name="FadeRunButton" Content="Run" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="0,100,0,0"/>
+        <TextBox x:Name="FadetimeBox" HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="111" Margin="114,101,0,0"/>
+        <Label x:Name="label2" Content="秒数" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="75,97,0,0"/>
+        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="75,23,0,0"/>
+        <TextBox x:Name="Volumetext" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="30" Margin="225,48,0,0"/>
+        <Button x:Name="Volumesetbutton" Content="SET" HorizontalAlignment="Left" VerticalAlignment="Top" Width="40" Margin="260,49,0,0" Click="Volumesetbutton_Click"/>
+        <TextBox x:Name="Fadetext" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="30" Margin="225,73,0,0" RenderTransformOrigin="0.5,2.565"/>
+        <Button x:Name="Fadesetbutton" Content="SET" HorizontalAlignment="Left" VerticalAlignment="Top" Width="40" Margin="260,75,0,0" Click="Fadesetbutton_Click"/>
 
     </Grid>
 </Window>

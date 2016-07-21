@@ -1,18 +1,7 @@
 ﻿using Microsoft.Win32;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.Windows.Media.Animation;
 
 namespace SiLiPlay
 {
@@ -31,7 +20,7 @@ namespace SiLiPlay
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             playwindow.Close();
-           
+
         }
 
         private void OpenButton_Click(object sender, RoutedEventArgs e)
@@ -45,12 +34,13 @@ namespace SiLiPlay
             {
                 playwindow.open(new Uri(ofd.FileName));
             }
-            
+
         }
 
         private void playbutton_Click(object sender, RoutedEventArgs e)
         {
             playwindow.play();
+
         }
 
         private void StopButton_Click(object sender, RoutedEventArgs e)
@@ -60,7 +50,37 @@ namespace SiLiPlay
 
         private void slider1_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            playwindow.mediaElement.Volume = slider1.Value;
+            playwindow.mediaElement.Volume = Volumeslider.Value;
+        }
+
+        private void FadeRunButton_Click(object sender, RoutedEventArgs e)
+        {
+            var animation = new DoubleAnimation();
+
+
+            animation.From = Volumeslider.Value;
+            animation.To = Fadeslider.Value;
+            animation.Duration = TimeSpan.FromSeconds(double.Parse(FadetimeBox.Text));
+            Storyboard.SetTargetProperty(animation, new PropertyPath("Value"));
+            Storyboard.SetTarget(animation, Volumeslider);
+            var sb = new Storyboard();
+            sb.FillBehavior = FillBehavior.HoldEnd;
+            sb.Children.Add(animation);
+            sb.Begin();
+
+
+        }
+
+        private void Volumesetbutton_Click(object sender, RoutedEventArgs e)
+        {
+            Volumeslider.Value = double.Parse(Volumetext.Text)/100;
+        }
+
+
+
+        private void Fadesetbutton_Click(object sender, RoutedEventArgs e)
+        {
+            Fadeslider.Value = double.Parse(Fadetext.Text) / 100;
         }
     }
 }
