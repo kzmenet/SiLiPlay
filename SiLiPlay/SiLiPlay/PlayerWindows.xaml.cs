@@ -10,26 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace SiLiPlay
 {
     /// <summary>
-    /// MainWindow.xaml の相互作用ロジック
+    /// PlayerWindows.xaml の相互作用ロジック
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class PlayerWindows : Window
     {
-        PlayerWindows playwindow = new PlayerWindows();
-        public MainWindow()
+        public PlayerWindows()
         {
             InitializeComponent();
-            playwindow.Show();
-        }
-
-        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            playwindow.Close();
         }
     }
 }

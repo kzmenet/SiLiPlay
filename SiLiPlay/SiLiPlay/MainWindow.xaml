@@ -5,8 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SiLiPlay"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="164" Width="235.666" Closing="Window_Closing">
     <Grid>
-        
+        <Button x:Name="playbutton" Content="Play" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="0,23,0,0"/>
+        <Button x:Name="StopButton" Content="Stop" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="75,23,0,0"/>
+        <Button x:Name="OpenButton" Content="Open" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="150,23,0,0"/>
+        <Slider x:Name="slider" HorizontalAlignment="Left" VerticalAlignment="Top" Width="225"/>
+        <Label x:Name="label" Content="音量" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,43,0,0"/>
+        <Slider x:Name="slider1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="39,48,0,0" Width="186"/>
+        <Label x:Name="label1" Content="Fade" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,69,0,0"/>
+        <Slider x:Name="slider2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="39,77,0,0" Width="186"/>
+        <Button x:Name="button" Content="Run" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="0,100,0,0"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="100" VerticalAlignment="Top" Width="104" Margin="121,101,0,0"/>
+        <Label x:Name="label2" Content="減少量" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="75,97,0,0"/>
+
     </Grid>
 </Window>
