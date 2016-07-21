@@ -83,5 +83,30 @@ namespace SiLiPlay
         {
             Fadeslider.Value = double.Parse(Fadetext.Text) / 100;
         }
+
+        private void topmostcheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            Topmost = true;
+        }
+
+        private void topmostcheckBox_Unchecked(object sender, RoutedEventArgs e)
+        {
+            Topmost = false;
+        }
+
+        private void pausebutton_Click(object sender, RoutedEventArgs e)
+        {
+            playwindow.pause();
+        }
+
+        private void mediasizecheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            playwindow.windowsizemediasize = true;
+        }
+
+        private void mediasizecheckBox_Unchecked(object sender, RoutedEventArgs e)
+        {
+            playwindow.windowsizemediasize = false;
+        }
     }
 }

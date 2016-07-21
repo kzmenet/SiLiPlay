@@ -18,11 +18,13 @@
         <Button x:Name="FadeRunButton" Content="Run" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="0,100,0,0"/>
         <TextBox x:Name="FadetimeBox" HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="111" Margin="114,101,0,0"/>
         <Label x:Name="label2" Content="秒数" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="75,97,0,0"/>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="75,23,0,0"/>
+        <Button x:Name="pausebutton" Content="Pause" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="75,23,0,0" Click="pausebutton_Click"/>
         <TextBox x:Name="Volumetext" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="30" Margin="225,48,0,0"/>
         <Button x:Name="Volumesetbutton" Content="SET" HorizontalAlignment="Left" VerticalAlignment="Top" Width="40" Margin="260,49,0,0" Click="Volumesetbutton_Click"/>
         <TextBox x:Name="Fadetext" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="30" Margin="225,73,0,0" RenderTransformOrigin="0.5,2.565"/>
         <Button x:Name="Fadesetbutton" Content="SET" HorizontalAlignment="Left" VerticalAlignment="Top" Width="40" Margin="260,75,0,0" Click="Fadesetbutton_Click"/>
+        <CheckBox x:Name="topmostcheckBox" Content="メインウインドウ常時最前面" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,125,0,0" Checked="topmostcheckBox_Checked" Unchecked="topmostcheckBox_Unchecked"/>
+        <CheckBox x:Name="mediasizecheckBox" Content="ウインドウのサイズを再生ファイルに合わせる" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,140,0,0" Checked="mediasizecheckBox_Checked" Unchecked="mediasizecheckBox_Unchecked"/>
 
     </Grid>
 </Window>
