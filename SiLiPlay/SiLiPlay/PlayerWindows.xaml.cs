@@ -21,11 +21,6 @@ namespace SiLiPlay
     public partial class PlayerWindows : Window
     {
 
-
-
-
-
-
         public PlayerWindows()
         {
             InitializeComponent();
@@ -34,7 +29,7 @@ namespace SiLiPlay
         public void open(Uri a)
         {
             mediaElement.Source = a;
-            
+            showoneframe();
 
             
         }
@@ -49,6 +44,7 @@ namespace SiLiPlay
         public void stop()
         {
             mediaElement.Stop();
+            showoneframe();
         }
         private void showoneframe()
         {

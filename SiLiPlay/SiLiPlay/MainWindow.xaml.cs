@@ -57,5 +57,10 @@ namespace SiLiPlay
         {
             playwindow.stop();
         }
+
+        private void slider1_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            playwindow.mediaElement.Volume = slider1.Value;
+        }
     }
 }

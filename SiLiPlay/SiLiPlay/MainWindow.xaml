@@ -12,9 +12,9 @@
         <Button x:Name="OpenButton" Content="Open" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="150,23,0,0" Click="OpenButton_Click"/>
         <Slider x:Name="slider" HorizontalAlignment="Left" VerticalAlignment="Top" Width="225"/>
         <Label x:Name="label" Content="音量" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,43,0,0"/>
-        <Slider x:Name="slider1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="39,48,0,0" Width="186"/>
+        <Slider x:Name="slider1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="39,48,0,0" Width="186" Maximum="1" LargeChange="0" SmallChange="0.01" ValueChanged="slider1_ValueChanged" Value="1"/>
         <Label x:Name="label1" Content="Fade" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,69,0,0"/>
-        <Slider x:Name="slider2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="39,77,0,0" Width="186"/>
+        <Slider x:Name="slider2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="39,77,0,0" Width="186" SmallChange="0.01" Maximum="1"/>
         <Button x:Name="button" Content="Run" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="0,100,0,0"/>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="100" VerticalAlignment="Top" Width="104" Margin="121,101,0,0"/>
         <Label x:Name="label2" Content="減少量" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="75,97,0,0"/>
