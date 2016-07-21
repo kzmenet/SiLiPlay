@@ -9,9 +9,11 @@ namespace SiLiPlay
     public partial class PlayerWindows : Window
     {
 
+
         public PlayerWindows()
         {
             InitializeComponent();
+            
         }
 
         public void open(Uri a)
@@ -43,5 +45,24 @@ namespace SiLiPlay
             mediaElement.IsMuted = false;
         }
 
+        private void Window_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
+
+        private void Window_MouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            if (pwindow.WindowState == WindowState.Maximized)
+            {
+                pwindow.WindowState = WindowState.Normal;
+            }
+            else if (pwindow.WindowState == WindowState.Normal)
+            {
+                pwindow.WindowState = WindowState.Maximized;
+            }else
+            {
+                pwindow.WindowState = WindowState.Normal;
+            }
+        }
     }
 }

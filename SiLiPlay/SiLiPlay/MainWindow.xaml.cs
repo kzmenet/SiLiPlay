@@ -13,8 +13,9 @@ namespace SiLiPlay
         PlayerWindows playwindow = new PlayerWindows();
         public MainWindow()
         {
-            InitializeComponent();
+ 
             playwindow.Show();
+            InitializeComponent();
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
