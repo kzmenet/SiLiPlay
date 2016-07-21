@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="164" Width="235.666" Closing="Window_Closing">
     <Grid>
-        <Button x:Name="playbutton" Content="Play" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="0,23,0,0"/>
-        <Button x:Name="StopButton" Content="Stop" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="75,23,0,0"/>
-        <Button x:Name="OpenButton" Content="Open" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="150,23,0,0"/>
+        <Button x:Name="playbutton" Content="Play" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="0,23,0,0" Click="playbutton_Click"/>
+        <Button x:Name="StopButton" Content="Stop" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="75,23,0,0" Click="StopButton_Click"/>
+        <Button x:Name="OpenButton" Content="Open" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="150,23,0,0" Click="OpenButton_Click"/>
         <Slider x:Name="slider" HorizontalAlignment="Left" VerticalAlignment="Top" Width="225"/>
         <Label x:Name="label" Content="音量" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,43,0,0"/>
         <Slider x:Name="slider1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="39,48,0,0" Width="186"/>

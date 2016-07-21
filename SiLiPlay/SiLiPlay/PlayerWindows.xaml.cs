@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,9 +20,44 @@ namespace SiLiPlay
     /// </summary>
     public partial class PlayerWindows : Window
     {
+
+
+
+
+
+
         public PlayerWindows()
         {
             InitializeComponent();
         }
+
+        public void open(Uri a)
+        {
+            mediaElement.Source = a;
+            
+
+            
+        }
+        public void play()
+        {
+            mediaElement.Play();
+        }
+        public void pause()
+        {
+            mediaElement.Pause();
+        }
+        public void stop()
+        {
+            mediaElement.Stop();
+        }
+        private void showoneframe()
+        {
+            mediaElement.IsMuted = true;
+            mediaElement.Position = new TimeSpan(1000);
+            mediaElement.Play();
+            mediaElement.Pause();
+            mediaElement.IsMuted = false;
+        }
+
     }
 }

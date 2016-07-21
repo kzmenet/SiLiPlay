@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -30,6 +31,31 @@ namespace SiLiPlay
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             playwindow.Close();
+           
+        }
+
+        private void OpenButton_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "動画ファイル|*.mp4;*.avi;*.wmv|すべてのファイル|*.*";
+            ofd.FilterIndex = 1;
+            ofd.Title = "Open";
+            ofd.RestoreDirectory = true;
+            if (ofd.ShowDialog() == true)
+            {
+                playwindow.open(new Uri(ofd.FileName));
+            }
+            
+        }
+
+        private void playbutton_Click(object sender, RoutedEventArgs e)
+        {
+            playwindow.play();
+        }
+
+        private void StopButton_Click(object sender, RoutedEventArgs e)
+        {
+            playwindow.stop();
         }
     }
 }

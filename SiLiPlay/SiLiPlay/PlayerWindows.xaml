@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SiLiPlay"
         mc:Ignorable="d"
-        Title="PlayerWindows" Height="300" Width="300" WindowStartupLocation="CenterScreen" WindowState="Minimized" WindowStyle="ToolWindow">
+        Title="PlayerWindows" Height="300" Width="300" WindowStartupLocation="Manual" WindowStyle="ToolWindow">
     <Grid>
-        <MediaElement x:Name="mediaElement"/>
+        <MediaElement x:Name="mediaElement" LoadedBehavior="Manual"/>
 
     </Grid>
 </Window>
