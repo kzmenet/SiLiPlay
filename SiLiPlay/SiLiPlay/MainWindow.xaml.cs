@@ -34,6 +34,8 @@ namespace SiLiPlay
             if (ofd.ShowDialog() == true)
             {
                 playwindow.open(new Uri(ofd.FileName));
+                Title = System.IO.Path.GetFileName(ofd.FileName);
+
             }
 
         }
