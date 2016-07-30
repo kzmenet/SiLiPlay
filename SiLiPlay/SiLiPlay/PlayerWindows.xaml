@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="PlayerWindows" Height="293" Width="482" WindowStartupLocation="Manual" MouseLeftButtonDown="Window_MouseLeftButtonDown" WindowStyle="None" MouseDoubleClick="Window_MouseDoubleClick" SizeChanged="Window_SizeChanged">
     <Grid>
-        <MediaElement x:Name="mediaElement" LoadedBehavior="Manual"/>
+        <MediaElement x:Name="mediaElement" LoadedBehavior="Manual" Margin="0"/>
 
     </Grid>
 </Window>

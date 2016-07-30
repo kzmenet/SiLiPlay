@@ -8,11 +8,11 @@ using System.Windows;
 // アセンブリに関連付けられている情報を変更するには、
 // これらの属性値を変更してください。
 [assembly: AssemblyTitle("SiLiPlay")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("シンプルな動画プレイヤー")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
+[assembly: AssemblyCompany("Murata Institute of Technology")]
 [assembly: AssemblyProduct("SiLiPlay")]
-[assembly: AssemblyCopyright("Copyright © Microsoft 2016")]
+[assembly: AssemblyCopyright("Copyright © kzme.net 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -51,5 +51,7 @@ using System.Windows;
 // すべての値を指定するか、下のように '*' を使ってビルドおよびリビジョン番号を 
 // 既定値にすることができます:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyVersion("0.1.2.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: Guid("85EC9101-EAF9-49DC-A362-85AB8D7FA3BB")]
+

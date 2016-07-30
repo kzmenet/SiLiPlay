@@ -19,7 +19,7 @@ namespace SiLiPlay
         public PlayerWindows()
         {
             InitializeComponent();
-            
+            mediaElement.ScrubbingEnabled = true;
         }
 
         public void open(Uri a)
@@ -44,11 +44,15 @@ namespace SiLiPlay
         }
         private void showoneframe()
         {
+
+            //mediaElement.ScrubbingEnabled = true;
             mediaElement.IsMuted = true;
             mediaElement.Play();
-            mediaElement.Position = new TimeSpan(1000);
             mediaElement.Pause();
+            mediaElement.Position = new TimeSpan(1000);
             mediaElement.IsMuted = false;
+            //mediaElement.ScrubbingEnabled = false;
+
         }
 
         private void Window_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
