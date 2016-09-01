@@ -11,9 +11,9 @@ namespace SiLiPlay
     public partial class MainWindow : Window
     {
         PlayerWindows playwindow = new PlayerWindows();
+
         public MainWindow()
         {
- 
             playwindow.Show();
             InitializeComponent();
         }
@@ -21,7 +21,6 @@ namespace SiLiPlay
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             playwindow.Close();
-
         }
 
         private void OpenButton_Click(object sender, RoutedEventArgs e)
@@ -35,15 +34,12 @@ namespace SiLiPlay
             {
                 playwindow.open(new Uri(ofd.FileName));
                 Title = System.IO.Path.GetFileName(ofd.FileName);
-
             }
-
         }
 
         private void playbutton_Click(object sender, RoutedEventArgs e)
         {
             playwindow.play();
-
         }
 
         private void StopButton_Click(object sender, RoutedEventArgs e)
@@ -59,8 +55,6 @@ namespace SiLiPlay
         private void FadeRunButton_Click(object sender, RoutedEventArgs e)
         {
             var animation = new DoubleAnimation();
-
-
             animation.From = Volumeslider.Value;
             animation.To = Fadeslider.Value;
             animation.Duration = TimeSpan.FromSeconds(double.Parse(FadetimeBox.Text));
@@ -70,16 +64,12 @@ namespace SiLiPlay
             sb.FillBehavior = FillBehavior.HoldEnd;
             sb.Children.Add(animation);
             sb.Begin();
-
-
         }
 
         private void Volumesetbutton_Click(object sender, RoutedEventArgs e)
         {
             Volumeslider.Value = double.Parse(Volumetext.Text)/100;
         }
-
-
 
         private void Fadesetbutton_Click(object sender, RoutedEventArgs e)
         {
@@ -110,7 +100,5 @@ namespace SiLiPlay
         {
             playwindow.windowsizemediasize = false;
         }
-
-
     }
 }

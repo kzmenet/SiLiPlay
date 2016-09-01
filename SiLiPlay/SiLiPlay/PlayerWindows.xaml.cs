@@ -13,8 +13,6 @@ namespace SiLiPlay
 
         private bool Windowsizemediasize = false; 
         public bool windowsizemediasize { get { return Windowsizemediasize; } set { Windowsizemediasize = value; windowsizelock(); } }
-        
-        
 
         public PlayerWindows()
         {
@@ -26,25 +24,26 @@ namespace SiLiPlay
         {
             mediaElement.Source = a;
             showoneframe();
-
-
         }
+
         public void play()
         {
             mediaElement.Play();
         }
+
         public void pause()
         {
             mediaElement.Pause();
         }
+
         public void stop()
         {
             mediaElement.Stop();
             showoneframe();
         }
+
         private void showoneframe()
         {
-
             //mediaElement.ScrubbingEnabled = true;
             mediaElement.IsMuted = true;
             mediaElement.Play();
@@ -52,7 +51,6 @@ namespace SiLiPlay
             mediaElement.Position = new TimeSpan(1000);
             mediaElement.IsMuted = false;
             //mediaElement.ScrubbingEnabled = false;
-
         }
 
         private void Window_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
